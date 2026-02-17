@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ─── Deep Void Design System ─── */
+@theme inline {
+  /* Colors */
+  --color-void: #050505;
+  --color-surface: #121212;
+  --color-surface-alt: #0a0a0a;
+  --color-empire-gold: #D4AF37;
+  --color-neon-blue: #4f46e5;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-syne: var(--font-syne-family), "Syne", sans-serif;
+  --font-inter: var(--font-inter-family), "Inter", sans-serif;
+}
+
+/* ─── Base Reset ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  /* Lenis handles smooth scroll */
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--color-empire-gold);
+  color: var(--color-void);
+}
+
+/* ─── Container Fluid ─── */
+.container-fluid {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/* ─── Section Spacing ─── */
+.section-dark {
+  background-color: var(--color-void);
+}
+
+.section-raised {
+  background-color: var(--color-surface);
+}
+
+/* ─── Outline Text (for Service Numbers) ─── */
+.text-outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.text-outline-fill {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px white;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-empire-gold);
+  border-radius: 2px;
+}
